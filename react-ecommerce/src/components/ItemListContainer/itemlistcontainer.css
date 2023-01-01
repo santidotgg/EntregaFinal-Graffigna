@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+
+.greetingFont{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.imageSize{
+    width: 250px;
+}
+
+.itemList{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+
+}

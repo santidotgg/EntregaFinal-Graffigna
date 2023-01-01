@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
+
+
+.navTextColor {
+  color: #fff;
+}
+
+.navFont {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.navColor{
+    background-color: #161616;
+}
