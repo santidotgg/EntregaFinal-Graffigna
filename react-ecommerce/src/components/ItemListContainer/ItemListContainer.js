@@ -15,33 +15,6 @@ const ItemListContainer = ({ greeting }) => {
     const { categoryId } = useParams();
     const [loading, setLoading] = useState(true);
 
-    // useEffect(() => {
-    //     setLoading(true);
-    //     if (categoryId) {
-    //         getProductsByCategory(categoryId)
-    //         .then(response => {
-    //             setItems(response);
-    //         })
-    //         .catch(error => {
-    //             console.log(error);
-    //         })
-    //         .finally(() => {
-    //             setLoading(false);
-    //         })
-    //     }else {
-    //     getProducts()
-    //     .then(response => {
-    //         setItems(response);
-    //     })
-    //     .catch(error => {
-    //         console.log(error);
-    //     })
-    //     .finally(() => {
-    //         setLoading(false);
-    //     })
-    //     ;}
-
-    // }, [categoryId]); // categoryId hay que ver si va o no
 
     useEffect(() => {
         setLoading(true);
@@ -61,13 +34,11 @@ const ItemListContainer = ({ greeting }) => {
         );
 
 
-
     }, [categoryId]);
 
     if (loading) {
         return <Loading />
     }
-
 
     return (
         <div>

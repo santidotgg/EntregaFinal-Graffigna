@@ -1,0 +1,10 @@
+/* center a button */
+.buttonStyle{
+    margin: 0 auto;
+    display: block;
+}
+
+.textDec{
+    text-decoration: none;
+    font-weight: bold;
+}

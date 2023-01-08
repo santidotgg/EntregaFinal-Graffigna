@@ -1,14 +1,7 @@
 import { useState ,useEffect } from 'react';
-import { getProductById } from '../MockProducts/MockProducts';
 import { useParams } from 'react-router-dom';
 import * as React from 'react';
 import Container from '@mui/material/Container';
-// import Card from '@mui/material/Card';
-// import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
-// import Typography from '@mui/material/Typography';
-// import { Button, CardActionArea, CardActions } from '@mui/material';
-// import ItemCount from '../ItemCount/ItemCount';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { getDoc, doc } from 'firebase/firestore';
 import { db } from '../../service/firebase/firebaseconfig';
@@ -21,17 +14,6 @@ const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
     const { itemId } = useParams();
     const [loading, setLoading] = useState(true);
-
-
-    // useEffect(() => {
-    //     getProductById(itemId)
-    //     .then(response => {
-    //         setItem(response);
-    //     })
-    //     .catch(error => {
-    //         console.log(error);
-    //     });
-    // }, [itemId]);
 
 
     useEffect(() => {

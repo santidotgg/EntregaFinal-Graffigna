@@ -5,6 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import './Item.css';
 
 const Item = ({ item }) => {
 
@@ -30,7 +31,11 @@ const Item = ({ item }) => {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                <Link to={`/item/${item.id}`}><Button type='submit' variant="contained">Details</Button></Link> 
+                <div className="buttonStyle">
+                    <Link to={`/item/${item.id}`}>
+                        <Button type='submit' className="textDec" variant="contained">Details</Button>
+                    </Link> 
+                </div>
                 </CardActions>
                 </Card>
 

@@ -7,6 +7,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Loading from '../Loading/Loading';
+import Button from "@mui/material/Button";
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { NotificationContext } from '../../context/NotificationContext';
