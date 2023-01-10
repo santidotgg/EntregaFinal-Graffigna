@@ -60,39 +60,3 @@ export const CartProvider = ({ children }) => {
             )
     }
 
-// const CartProvider = ({ children }) => {
-//     const [cart, setCart] = useState([]);
-//     const [total, setTotal] = useState(0);
-    
-//     const addCart = (itemToAdd) => {
-//         if (!isInCart(itemToAdd.id)) {
-//         setCart([...cart, itemToAdd]);
-//         }
-//     };
-    
-//     const isInCart = (id) => {
-//         return cart.some(cart => cart.id === id)
-//     }
-    
-//     const removeCart = (id) => {
-//         setCart(cart.filter(cart => cart.id !== id))
-//     }
-    
-//     const clearCart = () => {
-//         setCart([])
-//     }
-    
-//     const getTotal = () => {
-//         let total = 0;
-//         cart.forEach(item => {
-//         total += item.price
-//         })
-//         setTotal(total)
-//     }
-    
-//     return (
-//         <CartContext.Provider value={{ cart, addCart, removeCart, clearCart, total, getTotal }}>
-//         {children}
-//         </CartContext.Provider>
-//     )
-//     }

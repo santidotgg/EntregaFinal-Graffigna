@@ -11,11 +11,8 @@ const Cart = () => {
 
     return (
         <div>
-            <h1>Cart</h1>
-            {/* if the cart is empty display a message */}
-            {/* {cart.length === 0 && <p>Cart is empty</p>} */}
+            <h1>Cart</h1> 
             {cart.length > 0 ? <button onClick={clear}>Clear Cart</button> : <p>Cart is empty</p>}
-            {/* <button onClick={clear}>Clear Cart</button> */}
             <ul>
                 {cart.map((item) => (
                     <li key={item.id}>
@@ -28,8 +25,9 @@ const Cart = () => {
                 ))}
             </ul>
                 {cart.length > 0 && <h2>Total: $ {getTotal()}</h2>}
-            {/* <p>Total: {getTotalPrice()}</p> */}
+            {cart.length > 0 ?
             <Link to={'/checkout'}><Button variant="contained">Checkout</Button> </Link>
+            : ''}
             
         </div>
     );
