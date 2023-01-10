@@ -21,7 +21,6 @@ const ItemDetail = ({ id, title, pictureUrl, description, price, stock }) => {
     const { setNotification } = useContext(NotificationContext);
 
     const handleOnAdd = (quantity) => {
-        console.log(quantity);
         setQuantityToAdd(quantity);
         addItem({id, title, pictureUrl, price, stock, quantity });
         setNotification(`Product added to cart`, 'success');
