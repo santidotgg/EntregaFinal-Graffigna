@@ -42,7 +42,7 @@ const Checkout = () => {
         const productsInCart = await getDocs(productsRef);
         const { docs } = productsInCart;
         const outOfStock = [];
-        
+
         docs.forEach(doc => {
             const dataDoc = doc.data();
             const stockDb = dataDoc.stock;
@@ -84,10 +84,10 @@ const Checkout = () => {
     return (
         <div>
             <h1>Checkout</h1>
-            <div className="checkout__container">
-            <TextField id="outlined-basic" type='text' label="Name" variant="outlined" className='spacing' value={name} onChange={(e) => setName(e.target.value)} />
-            <TextField id="outlined-basic" type='number' label="Phone" variant="outlined" className='spacing' value={phone} onChange={(e) => setPhone(e.target.value)} />
-            <TextField id="outlined-basic" type='email' label="Email" variant="outlined" className='spacing' value={email} onChange={(e) => setEmail(e.target.value)} />
+            <div className="checkout__container spacing">
+                <TextField id="outlined-basic" type='text' label="Name" variant="outlined" className='spacing' value={name} onChange={(e) => setName(e.target.value)} />
+                <TextField id="outlined-basic" type='number' label="Phone" variant="outlined" className='spacing' value={phone} onChange={(e) => setPhone(e.target.value)} />
+                <TextField id="outlined-basic" type='email' label="Email" variant="outlined" className='spacing' value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
             
 
