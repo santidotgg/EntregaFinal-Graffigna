@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
 
-    const { cart, removeItem, getTotal, clear} = useContext(CartContext);
+    const { cart, removeItem, getTotal, clearCart} = useContext(CartContext);
 
 
     return (
         <div>
             <h1>Cart</h1> 
-            {cart.length > 0 ? <button onClick={clear}>Clear Cart</button> : <p>Cart is empty</p>}
+            {cart.length > 0 ? <button onClick={clearCart}>Clear Cart</button> : <p>Cart is empty</p>}
             <ul>
                 {cart.map((item) => (
                     <li key={item.id}>
